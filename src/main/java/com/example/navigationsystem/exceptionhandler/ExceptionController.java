@@ -19,7 +19,7 @@ public class ExceptionController {
 
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", LocalDateTime.now());
-        body.put("message", "station not found for the given id");
+        body.put("message", ex);
 
         return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
     }
